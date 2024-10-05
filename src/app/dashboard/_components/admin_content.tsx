@@ -2,19 +2,19 @@
 
 import { Layout } from "antd";
 
-const { Content } = Layout;
-
 const AdminContent = ({
   children,
-}: Readonly<{ children: React.ReactNode }>) => {
+}: Readonly<{
+  children: React.ReactNode;
+}>) => {
+  const { Content } = Layout;
+
   return (
-    <Content style={{ margin: "24px 16px 0" }}>
+    <Content>
       <div
         style={{
           padding: 24,
-          minHeight: 360,
-          background: "#ccc",
-          borderRadius: 2,
+          minHeight: "calc(100vh - 180px)",
         }}
       >
         {children}
